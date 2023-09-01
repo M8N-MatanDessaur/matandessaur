@@ -523,10 +523,9 @@ const MailButton = styled.a`
   text-decoration: none;
   padding: 10px;
   border-radius: 50px;
-  background-color: #4c4bc7;
+
   &:hover {
     color: #4c4bc7;
-    background-color: #fff;
     & svg {
       fill: #4c4bc7;
     }
