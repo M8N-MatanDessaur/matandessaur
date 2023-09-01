@@ -37,7 +37,7 @@ export default function App() {
               I am a highly motivated and skilled<br />
               <span>full stack React developer</span> and <span>photographer</span><br /> 
               driven by a profound <i>passion</i> and ever expanding <i>curiosity</i> 🔍<br /><br />
-              With an eye for detail, I blend <i>creativity</i> and <i>technical expertise</i> to craft.
+              With an eye for detail, I blend <i>creativity</i> and <i>technical expertise</i> to craft
               visually stunning and functional web applications.<br />
             </ProfileDescription>
             <ProfileLinks>
@@ -330,9 +330,9 @@ const ProfileDescription = styled.div`
   font-weight: 400;
 
   span {
-    background: #4c4bc7;
-    padding: 4px 8px;
-    border-radius: 50px;
+    color: #9190ff;
+    font-weight: 700;
+
   }
 
   i {
