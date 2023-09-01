@@ -35,7 +35,7 @@ export default function App() {
             <ProfileDescription>
               Hey there, I'm <b>Matan</b> 👋🏼 <br />
               I am a highly motivated and skilled<br />
-              <span>full stack React developer</span> and <span>photographer</span><br /> 
+              <span>full stack React developer</span> and <span>photographer</span><br />
               driven by a profound <i>passion</i> and ever expanding <i>curiosity</i> 🔍<br /><br />
               With an eye for detail, I blend <i>creativity</i> and <i>technical expertise</i> to craft
               visually stunning and functional web applications.<br />
@@ -227,6 +227,11 @@ export default function App() {
               )}
         </ProfileHeader>
       </ContentContainer>
+      <MailButton target="blank" href={`https://mail.google.com/mail/?view=cm&fs=1&to=matandessaur@gmail.com&su=Hey there 👋🏼, I am contacting you from your portfolio...`}>
+        <svg fill="#fff" height="22px" width="22px"viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2l.01-12c0-1.1.89-2 1.99-2Zm8 9 8-5V6l-8 5-8-5v2l8 5Z" clip-rule="evenodd"></path>
+        </svg>
+      </MailButton>
     </AppContainer>
   );
 }
@@ -504,4 +509,29 @@ const Tab = styled.div`
   }
 
   border-bottom: ${(props) => (props.selected === props.children.toLowerCase() ? "4px solid #4c4bc7" : "none")};
+`;
+
+const MailButton = styled.a`
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #4c4bc7;
+  &:hover {
+    color: #4c4bc7;
+    background-color: #fff;
+    & svg {
+      fill: #4c4bc7;
+    }
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
 `;
