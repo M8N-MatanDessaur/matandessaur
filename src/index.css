@@ -102,3 +102,9 @@ a{
 .embedsocial-hashtag{
     width: 100% !important;
 }
+
+.es-box {
+    border: 0 !important;	
+    border: none !important;
+    background-color: #181818 !important;
+}
