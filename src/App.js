@@ -514,8 +514,8 @@ const Tab = styled.div`
 
 const MailButton = styled.a`
   position: absolute;
-  top: 35px;
-  left: 35px;
+  top: 15px;
+  left: 15px;
   font-size: 18px;
   font-weight: 400;
   color: #fff;
