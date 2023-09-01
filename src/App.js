@@ -389,7 +389,7 @@ const ProfilePost = styled.div`
     height: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
-    border-radius: 8pxf;
+    border-radius: 8px;
     background: black;
   }
 `;
