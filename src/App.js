@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import whatsaround from "./whatsaround.jpg";
 import webcity from "./webcity.jpg";
@@ -29,7 +29,10 @@ export default function App() {
           <CoverImage>
             <LogoFrame src="https://3dlogo.vercel.app/" frameBorder="0" scrolling="no" />
           </CoverImage>
-          <ProfileImage src="https://avatars.githubusercontent.com/u/126172236?v=4" />
+          <ProfileImageContainer>
+            <ProfileImageFront />
+            <ProfileImageBack />
+          </ProfileImageContainer>
           <ProfileInfo>
             <ProfileName>Matan Dessaur</ProfileName>
             <ProfileDescription>
@@ -295,18 +298,48 @@ const ProfileInfo = styled.div`
   margin-top: 60px;
 `;
 
-const ProfileImage = styled.img`
+
+const introduceSpin = keyframes`
+  0% {
+    transform: rotateY(0deg) scale(1.1);
+  }
+  100% {
+    transform: rotateY(360deg) scale(1);
+  }
+`;
+
+const ProfileImageContainer = styled.div`
   position: absolute;
   top: 150px;
   left: 20px;
-  background-color: transparent;
   width: 130px;
   height: 130px;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  animation: ${introduceSpin} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s both;
+`;
+
+const ProfileImageSide = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
   border-radius: 50%;
   border: 8px solid #181818;
-  object-fit: cover;
-  margin-left: 20px;
+  background: #181818;
+  backface-visibility: hidden;
 `;
+
+const ProfileImageFront = styled(ProfileImageSide)`
+  background-image: url('https://avatars.githubusercontent.com/u/126172236?v=4');
+  background-size: cover;
+`;
+
+const ProfileImageBack = styled(ProfileImageSide)`
+  transform: rotateX(180deg);
+  background-color: #4c4bc7;
+`;
+
+
 
 const CoverImage = styled.div`
   position: relative;
@@ -315,6 +348,15 @@ const CoverImage = styled.div`
   height: 200px;
   object-fit: cover;
   overflow: hidden;
+`;
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 `;
 
 const LogoFrame = styled.iframe`
@@ -329,11 +371,36 @@ const LogoFrame = styled.iframe`
   object-fit: cover;
   margin-left: 20px;
   filter: grayscale(100%) brightness(0.5) contrast(1.2);
+
+  animation: ${fadeIn} ease-in-out 1.5s both;
+`;
+
+const magicFade = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+`;
+
+const perspectiveFadeIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 `;
 
 const ProfileName = styled.div`
   font-size: 35px;
   font-weight: 700;
+  animation: ${magicFade} 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s both;
 `;
 
 const ProfileDescription = styled.div`
@@ -349,6 +416,8 @@ const ProfileDescription = styled.div`
   i {
     color: #9190ff;
   }
+
+  animation: ${magicFade} 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s both;
 `;
 
 const ProfileLinks = styled.div`
@@ -361,6 +430,10 @@ const ProfileLinks = styled.div`
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 35px;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+
+  animation: ${perspectiveFadeIn} 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both;
 `;
 
 const ProfileLink = styled.a`
@@ -532,6 +605,8 @@ const MailButton = styled.a`
   &:active {
     transform: scale(0.9);
   }
+
+  animation: ${magicFade} 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both;
 `;
 
 const CallButton = styled.a`
@@ -549,4 +624,7 @@ const CallButton = styled.a`
   &:active {
     transform: scale(0.9);
   }
+
+  animation: ${magicFade} 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both;
+  animation-delay: 0.5s;
 `;
