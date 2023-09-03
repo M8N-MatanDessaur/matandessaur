@@ -308,6 +308,15 @@ const introduceSpin = keyframes`
   }
 `;
 
+const Spin = keyframes`
+  0% {
+    transform: rotateY(0deg) scale(0.9);
+  }
+  100% {
+    transform: rotateY(360deg) scale(1);
+  }
+`;
+
 const ProfileImageContainer = styled.div`
   position: absolute;
   top: 150px;
@@ -317,6 +326,10 @@ const ProfileImageContainer = styled.div`
   perspective: 1200px;
   transform-style: preserve-3d;
   animation: ${introduceSpin} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s both;
+
+  &:active {
+    animation: ${Spin} 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s both;
+  }
 `;
 
 const ProfileImageSide = styled.div`
