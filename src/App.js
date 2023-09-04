@@ -258,7 +258,7 @@ const AppContainer = styled.div`
 const ContentContainer = styled.div`
   position: relative;
   background-color: transparent;
-  width: 795px;
+  width: 100%;
   height: 100dvh;
   display: flex;
   flex-direction: column;
@@ -294,8 +294,12 @@ const ProfileInfo = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items:  flex-start;
-  padding: 35px;
   margin-top: 60px;
+  padding: 35px 75px;
+
+  @media (max-width: 765px) {
+    padding: 35px 35px;
+  }
 `;
 
 
@@ -320,7 +324,7 @@ const Spin = keyframes`
 const ProfileImageContainer = styled.div`
   position: absolute;
   top: 150px;
-  left: 20px;
+  left: 55px;
   width: 130px;
   height: 130px;
   perspective: 1200px;
@@ -329,6 +333,10 @@ const ProfileImageContainer = styled.div`
 
   &:active {
     animation: ${Spin} 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s both;
+  }
+
+  @media (max-width: 765px) {
+    left: 20px;
   }
 `;
 
@@ -424,10 +432,26 @@ const ProfileDescription = styled.div`
     color: #9190ff;
     font-weight: 700;
 
+    &:active {
+      color: #fff;
+      text-shadow: 0px 0px 10px #fff;
+    }
   }
 
   i {
     color: #9190ff;
+
+    &:active {
+      color: #fff;
+      text-shadow: 0px 0px 10px #fff;
+    }
+  }
+
+  b {
+    &:active {
+      color: #fff;
+      text-shadow: 0px 0px 10px #fff;
+    }
   }
 
   animation: ${magicFade} 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s both;
@@ -474,10 +498,11 @@ const ProfilePosts = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 5px;
   gap: 10px;
+  padding: 35px 75px;
 
-  @media (max-width: 800px) {
+  @media (max-width: 765px) {
+    padding: 15px;
     grid-template-columns: 1fr;
   }
 `;
@@ -496,8 +521,7 @@ const ProfilePost = styled.div`
 
   img {
     width: 100%;
-    height: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1/1 !important;
     object-fit: cover;
     border-radius: 8px;
     background: black;
@@ -522,8 +546,6 @@ const PostDescription = styled.div`
   font-size: 16px;
   font-weight: 400;
   margin-top: 5px;
-  overflow-y: scroll;
-  max-height: 135px;
   padding-right: 10px;
 
   &::-webkit-scrollbar {
