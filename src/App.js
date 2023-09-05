@@ -261,6 +261,8 @@ const ContentContainer = styled.div`
   width: 100%;
   height: 100dvh;
   display: flex;
+  align-items: center;
+  justify-content: start;
   flex-direction: column;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -282,7 +284,7 @@ const ProfileHeader = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items:  flex-start;
+  align-items:  center;
   padding: 0;
 `;
 
@@ -306,37 +308,44 @@ const ProfileInfo = styled.div`
 const introduceSpin = keyframes`
   0% {
     transform: rotateY(0deg) scale(1.1);
+    filter: grayscale(100%) brightness(0.5);
   }
   100% {
     transform: rotateY(360deg) scale(1);
+    filter: grayscale(0) brightness(1);
   }
 `;
 
 const Spin = keyframes`
   0% {
-    transform: rotateY(0deg) scale(0.9);
+    transform: rotateY(0deg) scale(1);
   }
   100% {
-    transform: rotateY(360deg) scale(1);
+    transform: rotateY(360deg) scale(0.8);
+    filter: grayscale(100%) brightness(0.5) drop-shadow(0px 0px 30px #4c4bc7);
   }
 `;
 
 const ProfileImageContainer = styled.div`
   position: absolute;
-  top: 150px;
+  top: 85px;
   left: 55px;
-  width: 130px;
-  height: 130px;
+  width: 200px;
+  height: 200px;
   perspective: 1200px;
   transform-style: preserve-3d;
-  animation: ${introduceSpin} 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s both;
+  animation: ${introduceSpin} 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s both;
 
   &:active {
-    animation: ${Spin} 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s both;
+    animation: ${Spin} 2s ease-in 0.1s both;	
   }
 
   @media (max-width: 765px) {
     left: 20px;
+    top: 150px;
+    left: 55px;
+    width: 130px;
+    height: 130px;
   }
 `;
 
@@ -495,19 +504,27 @@ const ProfileLink = styled.a`
 `;
 
 const ProfilePosts = styled.div`
-  width: 100%;
+  width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
-  padding: 35px 75px;
+  padding: 35px 45px;
+
+  @media (max-width: 960px) {
+    width: 100%;
+    padding: 15px;
+    grid-template-columns: 1fr 1fr;
+  }
 
   @media (max-width: 765px) {
+    width: 100%;
     padding: 15px;
     grid-template-columns: 1fr;
   }
 `;
 
 const ProfilePost = styled.div`
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
@@ -546,7 +563,7 @@ const PostDescription = styled.div`
   font-size: 16px;
   font-weight: 400;
   margin-top: 5px;
-  padding-right: 10px;
+  padding-right: 25px;
 
   &::-webkit-scrollbar {
     display: block;
@@ -577,6 +594,9 @@ const PostDescription = styled.div`
 `;
 
 const PostLink = styled.a`
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
   font-size: 16px;
   font-weight: 400;
   margin-top: 5px;
@@ -598,11 +618,16 @@ const PostLink = styled.a`
 `;
 
 const Tabs = styled.div`
-  width: 100%;
+  width: 90%;
+  margin:auto;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 10px;
+
+  @media (max-width: 765px) {
+    width: 100%;
+  }
 `;
 
 const Tab = styled.div`
