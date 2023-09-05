@@ -343,7 +343,6 @@ const ProfileImageContainer = styled.div`
   @media (max-width: 765px) {
     left: 20px;
     top: 150px;
-    left: 55px;
     width: 130px;
     height: 130px;
   }
