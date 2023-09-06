@@ -7,6 +7,7 @@ import lnreno from "./LNRenovation.jpg";
 import aleoresto from "./aleoresto.jpg";
 import simpl from "./Simpl.jpg";
 import dblslsh from "./dblslsh.jpg";
+import profile from "./profile.jpg";
 
 export default function App() {
   const [tab, setTab] = useState("projects");
@@ -29,6 +30,7 @@ export default function App() {
           <CoverImage>
             <LogoFrame src="https://3dlogo.vercel.app/" frameBorder="0" scrolling="no" />
           </CoverImage>
+          <ProfileBackground></ProfileBackground>
           <ProfileImageContainer>
             <ProfileImageFront />
             <ProfileImageBack />
@@ -59,7 +61,7 @@ export default function App() {
           {
             tab === "photography" ? (
               <>
-                <div className="embedsocial-hashtag" data-ref="c90ea5825f8c3a096654bcb12877f56f924659cc"></div>
+                <Gallery className="embedsocial-hashtag" data-ref="c90ea5825f8c3a096654bcb12877f56f924659cc"></Gallery>
               </>
             ) :
               (
@@ -307,44 +309,42 @@ const ProfileInfo = styled.div`
 
 const introduceSpin = keyframes`
   0% {
-    transform: rotateY(0deg) scale(1.1);
-    filter: grayscale(100%) brightness(0.5);
+    transform: rotateY(-180deg);
   }
   100% {
-    transform: rotateY(360deg) scale(1);
-    filter: grayscale(0) brightness(1);
+    transform: rotateY(360deg);
   }
 `;
 
 const Spin = keyframes`
   0% {
-    transform: rotateY(0deg) scale(1);
+    transform: rotateY(0deg);
   }
   100% {
-    transform: rotateY(360deg) scale(0.8);
-    filter: grayscale(100%) brightness(0.5) drop-shadow(0px 0px 30px #4c4bc7);
+    transform: rotateY(180deg) scale(0.8);
   }
 `;
 
 const ProfileImageContainer = styled.div`
   position: absolute;
-  top: 85px;
-  left: 55px;
-  width: 200px;
-  height: 200px;
+  top: 98px;
+  left: 68px;
+  width: 175px;
+  height: 175px;
   perspective: 1200px;
   transform-style: preserve-3d;
+  cursor: pointer;
   animation: ${introduceSpin} 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s both;
 
   &:active {
-    animation: ${Spin} 2s ease-in 0.1s both;	
+    animation: ${Spin} 0.5s ease-in 0.1s both;
   }
 
   @media (max-width: 765px) {
-    left: 20px;
+    left: 35px;
     top: 150px;
-    width: 130px;
-    height: 130px;
+    width: 110px;
+    height: 110px;
   }
 `;
 
@@ -353,21 +353,38 @@ const ProfileImageSide = styled.div`
   height: 100%;
   position: absolute;
   border-radius: 50%;
-  border: 8px solid #181818;
+  border: 10px solid #4c4bc7;
   background: #181818;
   backface-visibility: hidden;
 `;
 
+const ProfileBackground = styled.div`
+position: absolute;
+top: 85px;
+left: 55px;
+width: 200px;
+height: 200px;
+background-color: #181818;
+border-radius: 50%;
+z-index: 0;
+
+@media (max-width: 765px) {
+  top: 140px;
+  left: 25px;
+  width: 130px;
+  height: 130px;
+}
+`;
+
 const ProfileImageFront = styled(ProfileImageSide)`
-  background-image: url('https://avatars.githubusercontent.com/u/126172236?v=4');
+  background-image: url(${profile});
   background-size: cover;
 `;
 
 const ProfileImageBack = styled(ProfileImageSide)`
-  transform: rotateX(180deg);
+  transform: rotateY(180deg);
   background-color: #4c4bc7;
 `;
-
 
 
 const CoverImage = styled.div`
@@ -509,7 +526,7 @@ const ProfilePosts = styled.div`
   gap: 10px;
   padding: 35px 45px;
 
-  @media (max-width: 960px) {
+  @media (max-width: 1300px) {
     width: 100%;
     padding: 15px;
     grid-template-columns: 1fr 1fr;
@@ -638,8 +655,9 @@ const Tab = styled.div`
   text-align: center;
   text-decoration: none;
   padding: 10px;
+
   &:hover {
-    color: #ffffff;
+    text-shadow: 0px 0px 20px #fff;
   }
 
   &:active {
@@ -686,4 +704,16 @@ const CallButton = styled.a`
 
   animation: ${magicFade} 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both;
   animation-delay: 0.5s;
+`;
+
+const Gallery = styled.div`
+  padding: 0 50px !important;
+
+  @media (max-width: 960px) {
+    padding: 15px !important;
+  }
+
+  @media (max-width: 765px) {
+    padding: 5px !important;
+  }
 `;
