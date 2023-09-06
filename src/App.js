@@ -531,7 +531,7 @@ const ProfilePosts = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
-  padding: 35px 45px;
+  padding: 35px 0;
 
   @media (max-width: 1300px) {
     width: 100%;
@@ -714,7 +714,7 @@ const CallButton = styled.a`
 `;
 
 const Gallery = styled.div`
-  padding: 0 50px !important;
+  padding: 0 35px !important;
 
   @media (max-width: 960px) {
     padding: 15px !important;
