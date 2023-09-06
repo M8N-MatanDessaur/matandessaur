@@ -237,7 +237,7 @@ export default function App() {
                 </ProfilePosts>
               )}
         </ProfileHeader>
-        <MailButton target="blank" href="mailto:hello@matandessaur.me">
+        <MailButton href="mailto:hello@matandessaur.me">
           <svg fill="#fff" height="28px" width="28px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2l.01-12c0-1.1.89-2 1.99-2Zm8 9 8-5V6l-8 5-8-5v2l8 5Z" clip-rule="evenodd"></path>
           </svg>
