@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 
 import whatsaround from "./whatsaround.jpg";
 import webcity from "./webcity.jpg";
@@ -8,9 +8,15 @@ import aleoresto from "./aleoresto.jpg";
 import simpl from "./Simpl.jpg";
 import dblslsh from "./dblslsh.jpg";
 import profile from "./profile.jpg";
+import avatar from "./peeps-avatar-alpha-bw.png";
 
 export default function App() {
   const [tab, setTab] = useState("projects");
+  const [isRotated, setIsRotated] = useState(false);
+
+  const handleRotate = () => {
+    setIsRotated(!isRotated);
+  };
 
   const loadScript = () => {
     const script = document.createElement("script");
@@ -31,7 +37,7 @@ export default function App() {
             <LogoFrame src="https://3dlogo.vercel.app/" frameBorder="0" scrolling="no" />
           </CoverImage>
           <ProfileBackground></ProfileBackground>
-          <ProfileImageContainer>
+          <ProfileImageContainer onClick={handleRotate} isRotated={isRotated}>
             <ProfileImageFront />
             <ProfileImageBack />
           </ProfileImageContainer>
@@ -231,7 +237,7 @@ export default function App() {
                 </ProfilePosts>
               )}
         </ProfileHeader>
-        <MailButton target="blank" href="mailto:matandessaur@gmail.com">
+        <MailButton target="blank" href="mailto:hello@matandessaur.me">
           <svg fill="#fff" height="28px" width="28px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2l.01-12c0-1.1.89-2 1.99-2Zm8 9 8-5V6l-8 5-8-5v2l8 5Z" clip-rule="evenodd"></path>
           </svg>
@@ -321,7 +327,7 @@ const Spin = keyframes`
     transform: rotateY(0deg);
   }
   100% {
-    transform: rotateY(180deg) scale(0.8);
+    transform: rotateY(180deg);
   }
 `;
 
@@ -334,11 +340,10 @@ const ProfileImageContainer = styled.div`
   perspective: 1200px;
   transform-style: preserve-3d;
   cursor: pointer;
-  animation: ${introduceSpin} 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s both;
+  animation: ${props => props.isRotated 
+    ? css` ${Spin} 0.5s ease-in 0.1s both` 
+    : css` ${introduceSpin} 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s both`};
 
-  &:active {
-    animation: ${Spin} 0.5s ease-in 0.1s both;
-  }
 
   @media (max-width: 765px) {
     left: 35px;
@@ -383,7 +388,9 @@ const ProfileImageFront = styled(ProfileImageSide)`
 
 const ProfileImageBack = styled(ProfileImageSide)`
   transform: rotateY(180deg);
-  background-color: #4c4bc7;
+  background-color: #b0b0b0;
+  background-image: url(${avatar});
+  background-size: cover;
 `;
 
 
