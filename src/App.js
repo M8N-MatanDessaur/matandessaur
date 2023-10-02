@@ -341,7 +341,7 @@ const ProfileImageContainer = styled.div`
   transform-style: preserve-3d;
   cursor: pointer;
   animation: ${props => props.isRotated 
-    ? css` ${Spin} 0.5s ease-in 0.1s both` 
+    ? css` ${Spin} 0.175s ease-in 0.1s both` 
     : css` ${introduceSpin} 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s both`};
 
 
