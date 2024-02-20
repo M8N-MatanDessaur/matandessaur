@@ -30,7 +30,7 @@
     line-height: 1.5;
     color: #000;
     text-align: left;
-    background-color: var(--background-color);
+    background-color: #10150a;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
