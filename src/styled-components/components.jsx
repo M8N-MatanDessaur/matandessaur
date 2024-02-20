@@ -112,7 +112,7 @@ export const ProfileImageSide = styled.div`
   height: 100%;
   position: absolute;
   border-radius: 50%;
-  border: 10px solid #7f9c82;
+  border: 6px solid #7f9c82;
   background: #11150b;
   backface-visibility: hidden;
 `;
