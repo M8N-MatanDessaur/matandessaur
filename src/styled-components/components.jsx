@@ -156,6 +156,13 @@ export const CoverImage = styled.div`
   background-size: cover;
   background-position: right;
   overflow: hidden;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  @media (max-width: 765px) {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
 `;
 
 export const fadeIn = keyframes`
@@ -266,7 +273,7 @@ export const ProfileLink = styled.a`
 `;
 
 export const ProfilePosts = styled.div`
-  width: 90%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
