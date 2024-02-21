@@ -423,7 +423,7 @@ export const Tab = styled.div`
 export const MailButton = styled.a`
   position: absolute;
   top: 40px;
-  right: 15px;
+  right: 25px;
   font-size: 18px;
   font-weight: 400;
   color: #fff;
@@ -443,7 +443,7 @@ export const MailButton = styled.a`
 export const CallButton = styled.a`
   position: absolute;
   top: 100px;
-  right: 15px;
+  right: 25px;
   font-size: 18px;
   font-weight: 400;
   color: #fff;
