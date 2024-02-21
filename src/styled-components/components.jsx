@@ -387,7 +387,7 @@ export const PostLink = styled.a`
 `;
 
 export const Tabs = styled.div`
-  width: 90%;
+  width: 100%;
   margin:auto;
   display: flex;
   flex-direction: row;
