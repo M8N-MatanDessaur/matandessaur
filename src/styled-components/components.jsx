@@ -155,6 +155,7 @@ export const CoverImage = styled.div`
   height: 200px;
   background-size: cover;
   background-position: right;
+  background-repeat: no-repeat;
   overflow: hidden;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
