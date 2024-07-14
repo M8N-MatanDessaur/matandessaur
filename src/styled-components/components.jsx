@@ -1,7 +1,7 @@
 import styled, {keyframes, css} from 'styled-components';
 
 export const AppContainer = styled.div`
-  background-color: #10150a;
+  background-color: #0a0d15;
   min-height: 100dvh;
   color: white;
   font-size: calc(10px + 2vmin);
@@ -112,8 +112,8 @@ export const ProfileImageSide = styled.div`
   height: 100%;
   position: absolute;
   border-radius: 50%;
-  border: 6px solid #7f9c82;
-  background: #11150b;
+  border: 6px solid #5d70f6;
+  background: #0b0d14;
   backface-visibility: hidden;
 `;
 
@@ -123,7 +123,7 @@ top: 85px;
 left: 55px;
 width: 200px;
 height: 200px;
-background-color: #11150b;
+background-color: #0b0d14;
 border-radius: 50%;
 z-index: 0;
 
@@ -142,7 +142,7 @@ export const ProfileImageFront = styled(ProfileImageSide)`
 
 export const ProfileImageBack = styled(ProfileImageSide)`
   transform: rotateY(180deg);
-  background-color: #11150b;
+  background-color: #0b0d14;
   background-image: url(${props => props.avatar ? props.avatar : ''});
   background-size: cover;
 `;
@@ -207,7 +207,7 @@ export const ProfileDescription = styled.div`
   font-weight: 400;
 
   span {
-    color: #e89531;
+    color: #909dfc;
     font-weight: 700;
 
     &:active {
@@ -217,7 +217,7 @@ export const ProfileDescription = styled.div`
   }
 
   i {
-    color: #e89531;
+    color: #909dfc;
 
     &:active {
       color: #fff;
@@ -255,7 +255,7 @@ export const ProfileLink = styled.a`
   font-size: 16px;
   color: #ffffff;
   text-decoration: none;
-  background-color: #7f9c82;
+  background-color: #5d70f6;
   padding: 5px 15px;
   display: flex;
   justify-content: center;
@@ -265,7 +265,7 @@ export const ProfileLink = styled.a`
 
   &:hover {
     color: #FFF;
-    background-color: #e89531;
+    background-color: #909dfc;
   }
   &:active {
     transform: scale(0.9);
@@ -344,20 +344,20 @@ export const PostDescription = styled.div`
   }
 
   &::-webkit-scrollbar-thumb {
-    background: #7f9c82;
+    background: #5d70f6;
     border-radius: 10px;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: #7f9c82;
+    background: #909dfc;
   }
 
   &::-webkit-scrollbar-thumb:active {
-    background: #7f9c82;
+    background: #5d70f6;
   }
 
   &::-webkit-scrollbar-thumb:window-inactive {
-    background: #7f9c82;
+    background: #5d70f6;
   }
 
 `;
@@ -370,13 +370,13 @@ export const PostLink = styled.a`
   font-weight: 400;
   margin-top: 5px;
   color: #fff;
-  background-color: #7f9c82;
+  background-color: #5d70f6;
   padding: 10px;
   border-radius: 50px;
   text-decoration: none;
   &:hover {
     color: #FFF;
-    background-color: #e89531;
+    background-color: #909dfc;
     & svg {
       fill: #FFF;
     }
@@ -414,10 +414,10 @@ export const Tab = styled.div`
   }
 
   &:active {
-    border-bottom: 3px solid #7f9c82;
+    border-bottom: 3px solid #5d70f6;
   }
 
-  border-bottom: ${(props) => (props.selected === props.children.toLowerCase() ? "4px solid #7f9c82" : "none")};
+  border-bottom: ${(props) => (props.selected === props.children.toLowerCase() ? "4px solid #5d70f6" : "none")};
 `;
 
 export const MailButton = styled.a`
@@ -431,7 +431,7 @@ export const MailButton = styled.a`
   text-decoration: none;
   padding: 10px;
   border-radius: 50px;
-  background-color: #11150b;
+  background-color: #0b0d14;
 
   &:active {
     transform: scale(0.9);
@@ -451,7 +451,7 @@ export const CallButton = styled.a`
   text-decoration: none;
   padding: 10px;
   border-radius: 50px;
-  background-color: #11150b;
+  background-color: #0b0d14;
 
   &:active {
     transform: scale(0.9);

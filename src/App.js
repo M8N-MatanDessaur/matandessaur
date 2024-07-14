@@ -34,7 +34,7 @@ import aleoresto from "./assets/media/aleoresto.jpg";
 import simpl from "./assets/media/Simpl.jpg";
 import dblslsh from "./assets/media/dblslsh.jpg";
 import profile from "./assets/media/profile.jpg";
-import avatar from "./assets/media/peeps-avatar-alpha.png";
+import avatar from "./assets/media/peeps-avatar-alpha-bw.png";
 import cover from "./assets/media/headerbg.svg";
 
 export default function App() {
