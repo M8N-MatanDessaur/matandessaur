@@ -163,6 +163,7 @@ export const CoverImage = styled.div`
   @media (max-width: 765px) {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
+    background-size: initial;
   }
 `;
 
