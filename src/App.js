@@ -23,7 +23,7 @@ import {
   MailButton,
   CallButton,
   CoverImage,
-  LogoFrame,
+  ComingSoon,
   Gallery
 } from "./styled-components/components";
 
@@ -36,6 +36,10 @@ import dblslsh from "./assets/media/dblslsh.jpg";
 import profile from "./assets/media/profile.jpg";
 import avatar from "./assets/media/peeps-avatar-alpha-bw.png";
 import cover from "./assets/media/headerbg.svg";
+import itype from "./assets/media/itype.png";
+import v2f from "./assets/media/v2f.svg";
+import iou from "./assets/media/iou.jpg";
+import glad from "./assets/media/glad.png";
 
 export default function App() {
   const [tab, setTab] = useState("projects");
@@ -65,17 +69,17 @@ export default function App() {
           <ProfileBackground></ProfileBackground>
           <ProfileImageContainer onClick={handleRotate} isRotated={isRotated}>
             <ProfileImageFront profile={profile} />
-            <ProfileImageBack avatar={avatar}/>
+            <ProfileImageBack avatar={avatar} />
           </ProfileImageContainer>
           <ProfileInfo>
             <ProfileName>Matan Dessaur</ProfileName>
             <ProfileDescription>
-              Hey there, I'm <b>Matan</b> 👋🏼 <br />
-              I am a highly motivated and skilled<br />
-              <span>full stack React developer</span> and <span>photographer</span><br />
-              driven by a profound <i>passion</i> and ever expanding <i>curiosity</i> 🔍<br /><br />
-              With an eye for detail, I blend <i>creativity</i> and <i>technical expertise</i> to craft
-              visually stunning and functional web applications.<br />
+              Hey there, I'm <b>Matan</b> 👋🏼<br/> 
+              I am a motivated full stack developer, UI/UX designer, and photographer, creating innovative apps and visual stories. <br/> 
+              Driven by a profound <i>passion</i> and ever-expanding <i>curiosity</i>, I constantly seek new challenges and opportunities to grow.
+              <br/><br/>
+              With an eye for detail, I blend <i>creativity</i> and <i>technical expertise</i> to craft visually stunning and functional web applications.<br/>  
+              My work is fueled by a commitment to <i>excellence</i> and a desire to make a positive impact through technology and design.
             </ProfileDescription>
             <ProfileLinks>
               <ProfileLink href="https://github.com/M8N-MatanDessaur">GitHub</ProfileLink>
@@ -127,14 +131,14 @@ export default function App() {
                     </PostLink>
                   </ProfilePost>
                   <ProfilePost>
-                    <img src={lnreno} />
+                    <img src={itype} />
                     <PostInfo>
-                      <PostTitle>LNRenovation</PostTitle>
+                      <PostTitle>ITYPE</PostTitle>
                       <PostDescription>
-                        A website for a Montreal-based company with 6 years experience in construction offers high-quality project management, team coordination, and construction services. Commitment to deadlines, client expectations, optimal materials, and safety. Transparent process and solid feedback system ensure seamless client experience and satisfaction. The project was to build a website for lnrenovation.
+                        An AI-powered typewriter that auto-completes the user's text using Google Gemini AI. It features a minimalistic design reminiscent of old typewriters and offers intuitive keyboard shortcuts for seamless writing.
                       </PostDescription>
                     </PostInfo>
-                    <PostLink target="blank" href="https://lnrenovation.ca/">
+                    <PostLink target="blank" href="https://itype.space/">
                       <svg fill="#fff" height="18px" width="18px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1ZM8 13h8v-2H8v2Zm5-6h4c2.76 0 5 2.24 5 5s-2.24 5-5 5h-4v-1.9h4c1.71 0 3.1-1.39 3.1-3.1 0-1.71-1.39-3.1-3.1-3.1h-4V7Z" clip-rule="evenodd"></path>
                       </svg>
@@ -183,17 +187,37 @@ export default function App() {
                     </PostLink>
                   </ProfilePost>
                   <ProfilePost>
+                    <img src={v2f} alt="" />
                     <PostInfo>
-                      <PostTitle>Elska's Portfolio</PostTitle>
+                      <PostTitle>Gym Scheduler</PostTitle>
                       <PostDescription>
-                        Elska Dominique Modeling Portfolio Website
+                        The Fitness Management System is a web application designed to help fitness trainers and administrators manage client information, notes, and communication effectively.
                       </PostDescription>
                     </PostInfo>
-                    <PostLink target="blank" href="https://elska.superhi.hosting/">
+                    <PostLink target="blank" href="https://www.youtube.com/watch?v=lJU2ORf0fVQ">
                       <svg fill="#fff" height="18px" width="18px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1ZM8 13h8v-2H8v2Zm5-6h4c2.76 0 5 2.24 5 5s-2.24 5-5 5h-4v-1.9h4c1.71 0 3.1-1.39 3.1-3.1 0-1.71-1.39-3.1-3.1-3.1h-4V7Z" clip-rule="evenodd"></path>
                       </svg>
                     </PostLink>
+                  </ProfilePost>
+                  <ProfilePost>
+                    <img src={glad} alt="" />
+                    <PostInfo>
+                      <PostTitle>Groupe Leclerc</PostTitle>
+                      <PostDescription>
+                        Corporative Website for Groupe Leclerc a company that specializes architecture and design.
+                      </PostDescription>
+                    </PostInfo>
+                  </ProfilePost>
+                  <ProfilePost>
+                    <img src={iou} alt="" />
+                    <PostInfo>
+                      <ComingSoon><p>comming soon</p></ComingSoon>
+                      <PostTitle>IOU</PostTitle>
+                      <PostDescription>
+                        IOU is an advanced bill payment tracking app leveraging Google Gemini AI to manage and streamline shared expenses. It uses AI to analyze receipts, split costs, send reminders, and suggest payment methods.
+                      </PostDescription>
+                    </PostInfo>
                   </ProfilePost>
                   <ProfilePost>
                     <PostInfo>
@@ -216,19 +240,6 @@ export default function App() {
                       </PostDescription>
                     </PostInfo>
                     <PostLink target="blank" href="https://www.youtube.com/watch?v=IOA9wRd_Kqs&list=PLWt0a13MQnx3LWCT3IMFD-NArLAzUpSFv&index=2">
-                      <svg fill="#fff" height="18px" width="18px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1ZM8 13h8v-2H8v2Zm5-6h4c2.76 0 5 2.24 5 5s-2.24 5-5 5h-4v-1.9h4c1.71 0 3.1-1.39 3.1-3.1 0-1.71-1.39-3.1-3.1-3.1h-4V7Z" clip-rule="evenodd"></path>
-                      </svg>
-                    </PostLink>
-                  </ProfilePost>
-                  <ProfilePost>
-                    <PostInfo>
-                      <PostTitle>V2F - Scheduler</PostTitle>
-                      <PostDescription>
-                        The Fitness Management System is a web application for fitness trainers and administrators to manage client information, notes, and communication. Features include client and trainer list management, autonomous scheduling for shifts/events, and adding, editing, and viewing notes for individual clients.
-                      </PostDescription>
-                    </PostInfo>
-                    <PostLink target="blank" href="https://www.youtube.com/watch?v=lJU2ORf0fVQ&list=PLWt0a13MQnx3LWCT3IMFD-NArLAzUpSFv&index=9">
                       <svg fill="#fff" height="18px" width="18px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1ZM8 13h8v-2H8v2Zm5-6h4c2.76 0 5 2.24 5 5s-2.24 5-5 5h-4v-1.9h4c1.71 0 3.1-1.39 3.1-3.1 0-1.71-1.39-3.1-3.1-3.1h-4V7Z" clip-rule="evenodd"></path>
                       </svg>

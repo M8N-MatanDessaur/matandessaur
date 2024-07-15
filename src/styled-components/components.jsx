@@ -310,7 +310,7 @@ export const ProfilePost = styled.div`
   img {
     width: 100%;
     aspect-ratio: 1/1 !important;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 8px;
     background: black;
   }
@@ -474,3 +474,22 @@ export const Gallery = styled.div`
     padding: 5px !important;
   }
 `;
+
+export const ComingSoon = styled.div`
+  height: 45px;
+  background-color: #0a0d15;
+  border-radius: 50px;
+  padding: 10px 20px;
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  filter: drop-shadow(0px 0px 10px #ff9d00);
+  `;
