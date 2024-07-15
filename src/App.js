@@ -85,6 +85,7 @@ export default function App() {
               <ProfileLink href="https://github.com/M8N-MatanDessaur">GitHub</ProfileLink>
               <ProfileLink href="https://www.instagram.com/matan.dessaur/">Instagram</ProfileLink>
               <ProfileLink href="https://www.facebook.com/matan.dessaur.7/">Facebook</ProfileLink>
+              <ProfileLink href="https://x.com/matandxssaur">X</ProfileLink>
               <ProfileLink href="https://www.linkedin.com/in/m8n-matandessaur/">LinkedIn</ProfileLink>
               <ProfileLink href="https://webcity.dev/">webcity.dev</ProfileLink>
               <ProfileLink href="https://webcity.dev/toolbox">Toolbox</ProfileLink>
