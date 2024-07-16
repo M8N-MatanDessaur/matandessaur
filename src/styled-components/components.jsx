@@ -240,6 +240,9 @@ export const ProfileDescription = styled.div`
   }
 
   b {
+    color: #909dfc;
+    font-weight: 700;
+
     &:active {
       color: #fff;
       text-shadow: 0px 0px 10px #fff;

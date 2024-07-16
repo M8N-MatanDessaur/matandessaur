@@ -74,8 +74,8 @@ export default function App() {
           <ProfileInfo>
             <ProfileName>Matan Dessaur</ProfileName>
             <ProfileDescription>
-              Hey there, I'm <b>Matan</b> 👋🏼
-              I am a motivated full stack developer, UI/UX designer, and photographer, creating innovative apps and visual stories. 
+              Hey there, I'm Matan 👋🏼<br />
+              I am a motivated <b>full stack developer</b>, <b>UI/UX designer</b>, and <b>photographer</b>, creating innovative apps and visual stories. 
               Driven by a profound <i>passion</i> and ever-expanding <i>curiosity</i>, I constantly seek new challenges and opportunities to grow.
               <br /><br />
               With an eye for detail, I blend <i>creativity</i> and <i>technical expertise</i> to craft visually stunning and functional web applications.
