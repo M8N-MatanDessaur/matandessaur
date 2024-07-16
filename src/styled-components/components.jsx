@@ -218,6 +218,7 @@ export const ProfileName = styled.div`
 export const ProfileDescription = styled.div`
   font-size: 16px;
   font-weight: 400;
+  max-width: 800px;
 
   span {
     color: #909dfc;
