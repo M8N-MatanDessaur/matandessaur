@@ -62,7 +62,7 @@ export const ProfileInfo = styled.div`
   padding: 35px 75px;
 
   @media (max-width: 765px) {
-    padding: 35px 35px;
+    padding: 35px 25px;
   }
 `;
 
@@ -260,6 +260,11 @@ export const ProfileLinks = styled.div`
   margin-top: 35px;
   perspective: 1200px;
   transform-style: preserve-3d;
+
+  @media (max-width: 765px) {
+    align-items: center;
+    justify-content: center;
+  }
 
   animation: ${perspectiveFadeIn} 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both;
 `;
