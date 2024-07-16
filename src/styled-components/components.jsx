@@ -187,6 +187,17 @@ export const magicFade = keyframes`
   }
 `;
 
+export const magicFadeUp = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+`;
+
 export const perspectiveFadeIn = keyframes`
   0% {
     opacity: 0;
@@ -260,10 +271,19 @@ export const ProfileLink = styled.a`
   background-color: #5d70f6;
   padding: 10px;
   display: flex;
+  flex-direction: row;
+  gap: 10px;
   justify-content: center;
   align-items: center;
   border-radius: 50px;
   transition: all 0.2s ease-in-out;
+
+  p {
+    display: none;
+    padding: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, padding 0.5s ease-in-out;
+  }
 
   &:has(img) {
     padding: 5px;
@@ -274,12 +294,23 @@ export const ProfileLink = styled.a`
       border-radius: 50%;
       width: 100%;
       height: 100%;
-  }
+    }
   }
 
   &:hover {
     color: #FFF;
     background-color: #909dfc;
+
+    @media (min-width: 765px) {
+    p {
+      display: block;
+      position: absolute;
+      opacity: 1;
+      top: 60px;
+      transition: opacity 0.5s ease-in-out, padding 0.5s ease-in-out;
+      animation: ${fadeIn} 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s both;
+    }
+}
   }
   &:active {
     transform: scale(0.9);
@@ -292,6 +323,7 @@ export const ProfilePosts = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
   padding: 35px 0;
+  animation: ${magicFadeUp} 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both;
 
   @media (max-width: 1300px) {
     width: 100%;
@@ -407,6 +439,7 @@ export const Tabs = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 10px;
+  animation: ${magicFade} 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both;
 
   @media (max-width: 765px) {
     width: 100%;
