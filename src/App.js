@@ -29,7 +29,7 @@ import {
 
 import whatsaround from "./assets/media/whatsaround.jpg";
 import webcity from "./assets/media/webcity.jpg";
-import lnreno from "./assets/media/LNRenovation.jpg";
+import webcitylogo from "./assets/media/webcitylogo.png";
 import aleoresto from "./assets/media/aleoresto.jpg";
 import simpl from "./assets/media/Simpl.jpg";
 import dblslsh from "./assets/media/dblslsh.jpg";
@@ -74,21 +74,48 @@ export default function App() {
           <ProfileInfo>
             <ProfileName>Matan Dessaur</ProfileName>
             <ProfileDescription>
-              Hey there, I'm <b>Matan</b> 👋🏼<br/> 
-              I am a motivated full stack developer, UI/UX designer, and photographer, creating innovative apps and visual stories. <br/> 
+              Hey there, I'm <b>Matan</b> 👋🏼<br />
+              I am a motivated full stack developer, UI/UX designer, and photographer, creating innovative apps and visual stories. <br />
               Driven by a profound <i>passion</i> and ever-expanding <i>curiosity</i>, I constantly seek new challenges and opportunities to grow.
-              <br/><br/>
-              With an eye for detail, I blend <i>creativity</i> and <i>technical expertise</i> to craft visually stunning and functional web applications.<br/>  
+              <br /><br />
+              With an eye for detail, I blend <i>creativity</i> and <i>technical expertise</i> to craft visually stunning and functional web applications.<br />
               My work is fueled by a commitment to <i>excellence</i> and a desire to make a positive impact through technology and design.
             </ProfileDescription>
             <ProfileLinks>
-              <ProfileLink href="https://github.com/M8N-MatanDessaur">GitHub</ProfileLink>
-              <ProfileLink href="https://www.instagram.com/matan.dessaur/">Instagram</ProfileLink>
-              <ProfileLink href="https://www.facebook.com/matan.dessaur.7/">Facebook</ProfileLink>
-              <ProfileLink href="https://x.com/matandxssaur">X</ProfileLink>
-              <ProfileLink href="https://www.linkedin.com/in/m8n-matandessaur/">LinkedIn</ProfileLink>
-              <ProfileLink href="https://webcity.dev/">webcity.dev</ProfileLink>
-              <ProfileLink href="https://webcity.dev/toolbox">Toolbox</ProfileLink>
+              <ProfileLink href="https://github.com/M8N-MatanDessaur" title="github">
+                <svg width="25" height="25" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M12 1.5a10.5 10.5 0 0 0-3.323 20.46c.525.098.75-.225.75-.502v-1.785c-2.917.63-3.532-1.41-3.532-1.41a2.782 2.782 0 0 0-1.215-1.538c-.953-.645.075-.637.075-.637a2.205 2.205 0 0 1 1.605 1.087 2.25 2.25 0 0 0 3.06.87c.042-.532.277-1.03.66-1.402-2.325-.27-4.778-1.17-4.778-5.19a4.05 4.05 0 0 1 1.08-2.82 3.75 3.75 0 0 1 .105-2.775s.878-.285 2.888 1.072a9.975 9.975 0 0 1 5.25 0c2.002-1.357 2.88-1.072 2.88-1.072a3.75 3.75 0 0 1 .105 2.775 4.05 4.05 0 0 1 1.08 2.82c0 4.035-2.453 4.92-4.793 5.182a2.499 2.499 0 0 1 .713 1.943v2.88c0 .345.187.607.75.502A10.5 10.5 0 0 0 12 1.5Z" clip-rule="evenodd"></path>
+                </svg>
+              </ProfileLink>
+              <ProfileLink href="https://www.instagram.com/matan.dessaur/" title="instagram">
+                <svg width="25" height="25" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.805 8.277a1.08 1.08 0 1 0 0-2.16 1.08 1.08 0 0 0 0 2.16Z"></path>
+                  <path d="M12 7.375a4.622 4.622 0 1 0 0 9.244 4.622 4.622 0 0 0 0-9.244Zm0 7.622a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"></path>
+                  <path d="M12 4.622c2.403 0 2.688.009 3.637.052.57.007 1.136.112 1.671.31a2.982 2.982 0 0 1 1.708 1.708c.198.535.303 1.1.31 1.671.043.95.052 1.234.052 3.637s-.009 2.688-.052 3.637a4.982 4.982 0 0 1-.31 1.671 2.98 2.98 0 0 1-1.708 1.708 4.98 4.98 0 0 1-1.671.31c-.95.043-1.234.052-3.637.052s-2.688-.009-3.637-.052a4.981 4.981 0 0 1-1.671-.31 2.981 2.981 0 0 1-1.708-1.708 4.982 4.982 0 0 1-.31-1.671c-.043-.95-.052-1.234-.052-3.637s.009-2.688.052-3.637c.007-.57.112-1.136.31-1.67a2.981 2.981 0 0 1 1.708-1.709 4.981 4.981 0 0 1 1.671-.31c.95-.043 1.234-.052 3.637-.052ZM12 3c-2.444 0-2.75.01-3.71.054a6.605 6.605 0 0 0-2.185.419 4.602 4.602 0 0 0-2.633 2.632 6.605 6.605 0 0 0-.418 2.185C3.01 9.25 3 9.556 3 12s.01 2.75.054 3.71c.015.747.157 1.486.419 2.185a4.602 4.602 0 0 0 2.632 2.633c.7.262 1.438.403 2.185.418.96.044 1.266.054 3.71.054s2.75-.01 3.71-.054a6.606 6.606 0 0 0 2.185-.419 4.6 4.6 0 0 0 2.633-2.632c.262-.7.403-1.438.418-2.185.044-.96.054-1.266.054-3.71s-.01-2.75-.054-3.71a6.603 6.603 0 0 0-.419-2.185 4.603 4.603 0 0 0-2.632-2.632 6.605 6.605 0 0 0-2.185-.418C14.75 3.01 14.444 3 12 3Z"></path>
+                </svg>
+              </ProfileLink>
+              <ProfileLink href="https://www.facebook.com/matan.dessaur.7/" title="facebook">
+                <svg width="25" height="25" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.003 3H3.997A1.005 1.005 0 0 0 3 3.998v16.005a1.005 1.005 0 0 0 .998.997h8.617v-6.96h-2.34v-2.722h2.34V9.315c0-2.325 1.418-3.592 3.502-3.592.698 0 1.395 0 2.093.104V8.25h-1.433c-1.132 0-1.35.54-1.35 1.328v1.732h2.7l-.352 2.723h-2.347V21h4.575a1.006 1.006 0 0 0 .997-.997V3.997A1.005 1.005 0 0 0 20.003 3Z"></path>
+                </svg>
+              </ProfileLink>
+              <ProfileLink href="https://x.com/matandxssaur" title="x">
+                <svg width="25" height="25" fill="currentColor" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 1668.56 1221.19" viewBox="0 0 1668.56 1221.19" id="twitter-x"><path d="M283.94,167.31l386.39,516.64L281.5,1104h87.51l340.42-367.76L984.48,1104h297.8L874.15,558.3l361.92-390.99
+		h-87.51l-313.51,338.7l-253.31-338.7H283.94z M412.63,231.77h136.81l604.13,807.76h-136.81L412.63,231.77z" transform="translate(52.39 -25.059)"></path></svg>
+              </ProfileLink>
+              <ProfileLink href="https://www.linkedin.com/in/m8n-matandessaur/" title="linkedin">
+                <svg width="25" height="25" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.65 3H4.35C3.6 3 3 3.6 3 4.275V19.65c0 .675.6 1.275 1.35 1.275h15.3c.75 0 1.35-.6 1.35-1.275V4.275C21 3.6 20.4 3 19.65 3ZM8.325 18.3H5.7V9.75h2.625v8.55ZM7.05 8.55a1.584 1.584 0 0 1-1.575-1.575c0-.9.675-1.575 1.575-1.575.825 0 1.575.675 1.575 1.575 0 .9-.75 1.575-1.575 1.575Zm11.325 9.675H15.75v-4.2c0-.975 0-2.325-1.425-2.325s-1.575 1.125-1.575 2.175v4.275h-2.625v-8.4H12.6v1.125h.075c.375-.675 1.275-1.425 2.55-1.425 2.7 0 3.225 1.8 3.225 4.125v4.65h-.075Z"></path>
+                </svg>
+              </ProfileLink>
+              <ProfileLink href="https://webcity.dev/toolbox" title="toolbox">
+                <svg width="25" height="25" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.25 6.75H18V4.5A1.5 1.5 0 0 0 16.5 3h-9A1.5 1.5 0 0 0 6 4.5v2.25H3.75A2.25 2.25 0 0 0 1.5 9v10.5A1.5 1.5 0 0 0 3 21h18a1.5 1.5 0 0 0 1.5-1.5V9a2.25 2.25 0 0 0-2.25-2.25ZM7.5 4.5h9v2.25h-9V4.5Zm13.5 15H3v-6.75h6v3.75h6v-3.75h6v6.75Zm-10.5-6.75h3V15h-3v-2.25ZM3 11.25V9a.75.75 0 0 1 .75-.75h16.5A.75.75 0 0 1 21 9v2.25H3Z"></path>
+                </svg>
+              </ProfileLink>
+              <ProfileLink href="https://webcity.dev/" title="webcity">
+              <img src={webcitylogo} alt="webcity.dev" width="25" height="25" fill="currentColor"/>
+              </ProfileLink>
             </ProfileLinks>
           </ProfileInfo>
           <Tabs>

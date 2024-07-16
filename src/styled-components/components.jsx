@@ -1,4 +1,4 @@
-import styled, {keyframes, css} from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
 export const AppContainer = styled.div`
   background-color: #0a0d15;
@@ -94,8 +94,8 @@ export const ProfileImageContainer = styled.div`
   perspective: 1200px;
   transform-style: preserve-3d;
   cursor: pointer;
-  animation: ${props => props.isRotated 
-    ? css` ${Spin} 0.175s ease-in 0.1s both` 
+  animation: ${props => props.isRotated
+    ? css` ${Spin} 0.175s ease-in 0.1s both`
     : css` ${introduceSpin} 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.1s both`};
 
 
@@ -258,12 +258,24 @@ export const ProfileLink = styled.a`
   color: #ffffff;
   text-decoration: none;
   background-color: #5d70f6;
-  padding: 5px 15px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 50px;
   transition: all 0.2s ease-in-out;
+
+  &:has(img) {
+    padding: 5px;
+    height: 48px;
+    width: 48px;
+
+    img {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+  }
+  }
 
   &:hover {
     color: #FFF;
