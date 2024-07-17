@@ -24,7 +24,18 @@ import {
   CallButton,
   CoverImage,
   ComingSoon,
-  Gallery
+  Gallery,
+  ToggleButton,
+  HiddenContent,
+  SectionTimeline,
+  TitleWrapper,
+  IconBox,
+  Heading,
+  TimelineList,
+  TimelineItem,
+  TimelineItemTitle,
+  TimelineItemDate,
+  TimelineItemText
 } from "./styled-components/components";
 
 import whatsaround from "./assets/media/whatsaround.jpg";
@@ -44,6 +55,11 @@ import glad from "./assets/media/glad.png";
 export default function App() {
   const [tab, setTab] = useState("projects");
   const [isRotated, setIsRotated] = useState(false);
+  const [showMore, setShowMore] = useState(false);
+
+  const toggleShowMore = () => {
+    setShowMore(prevShowMore => !prevShowMore);
+  };
 
   const handleRotate = () => {
     setIsRotated(!isRotated);
@@ -75,12 +91,95 @@ export default function App() {
             <ProfileName>Matan Dessaur</ProfileName>
             <ProfileDescription>
               Hey there, I'm Matan 👋🏼<br />
-              I am a motivated <b>full stack developer</b>, <b>UI/UX designer</b>, and <b>photographer</b>, creating innovative apps and visual stories. 
+              I am a motivated <b>full stack developer</b>, <b>UI/UX designer</b>, and <b>photographer</b>, creating innovative apps and visual stories.
               Driven by a profound <i>passion</i> and ever-expanding <i>curiosity</i>, I constantly seek new challenges and opportunities to grow.
               <br /><br />
               With an eye for detail, I blend <i>creativity</i> and <i>technical expertise</i> to craft visually stunning and functional web applications.
               My work is fueled by a commitment to <i>excellence</i> and a desire to make a positive impact through technology and design.
             </ProfileDescription>
+            <ToggleButton onClick={toggleShowMore}>
+              {showMore ? 'Show Less' : 'Professional Journey'}
+            </ToggleButton>
+
+            <HiddenContent show={showMore}>
+          <SectionTimeline className="inherited-styles-for-exported-element section-timeline">
+
+            <TimelineList className="ol-timeline-list">
+              <TimelineItem className="li-timeline-item-unique-1">
+                <TimelineItemTitle className="h4-h4-timeline-item-title-unique-1">Cegep Du Vieux-Montreal</TimelineItemTitle>
+                <TimelineItemDate className="css_pro-generated-variation-span-1">2017 — 2019</TimelineItemDate>
+                <TimelineItemText className="p-timeline-text-unique-1">
+                  Computer Science Technology - Software Development & Network Management
+                </TimelineItemText>
+              </TimelineItem>
+
+              <TimelineItem className="li-timeline-item-unique-2">
+                <TimelineItemTitle className="h4-h4-timeline-item-title-unique-2">Cegep Du Vieux-Montreal</TimelineItemTitle>
+                <TimelineItemDate className="css_pro-generated-variation-span-2">2020 — 2022</TimelineItemDate>
+                <TimelineItemText className="p-timeline-text-unique-2">
+                  Photography - Professional Photography and Digital Imaging
+                </TimelineItemText>
+              </TimelineItem>
+
+              <TimelineItem className="li-timeline-item-unique-1">
+                <TimelineItemTitle className="h4-h4-timeline-item-title-unique-1">Teccart Institue</TimelineItemTitle>
+                <TimelineItemDate className="css_pro-generated-variation-span-1">2023</TimelineItemDate>
+                <TimelineItemText className="p-timeline-text-unique-1">
+                  Website and Mobile Application Development - Full Stack Developer
+                </TimelineItemText>
+              </TimelineItem>
+
+              <TimelineItem className="li-timeline-item-unique-2">
+                <TimelineItemTitle className="h4-h4-timeline-item-title-unique-2">Bathfitter - Saint-Eustache</TimelineItemTitle>
+                <TimelineItemDate className="css_pro-generated-variation-span-2">Full Stack Developer Lead&nbsp;&nbsp;<span>(Current)</span></TimelineItemDate>
+                <TimelineItemText className="p-timeline-text-unique-2">
+                  <ul>
+                    <li>
+                      Leading web development team in working collaboratively on a project, organizing scrums and backlogs daily.
+                    </li>
+                    <li>
+                      Implementing best coding practices to enhance system performance and code readability while keeping the codebase optimized.
+                    </li>
+                    <li>
+                      Adopting new technologies to continuously improve product development and staying up to date.
+                    </li>
+                    <li>
+                      Analyzing and resolving complex bugs, ensuring robust and reliable software performance and security.
+                    </li>
+                    <li>
+                      Developing and maintaining internal tools to optimize workflow and enhance team productivity.
+                    </li>
+                  </ul>
+                </TimelineItemText>
+              </TimelineItem>
+
+              <TimelineItem className="li-timeline-item-unique-2">
+                <TimelineItemTitle className="h4-h4-timeline-item-title-unique-2">Webcity.dev - Montreal</TimelineItemTitle>
+                <TimelineItemDate className="css_pro-generated-variation-span-2">Freelance&nbsp;&nbsp;<span>(Current)</span></TimelineItemDate>
+                <TimelineItemText className="p-timeline-text-unique-2">
+                  <ul>
+                    <li>
+                      Developing and maintaining websites and web applications for clients, ensuring high-quality design and functionality.
+                    </li>
+                    <li>
+                      Collaborating with clients to understand their needs and deliver custom solutions that meet their requirements.
+                    </li>
+                    <li>
+                      Implementing best coding practices to enhance web application performance and user experience.
+                    </li>
+                    <li>
+                      Creating visually stunning and user-friendly interfaces that engage users and drive conversions.
+                    </li>
+                    <li>
+                      Develop and maintain internal tools to optimize workflow and enhance team productivity.
+                    </li>
+                  </ul>
+                </TimelineItemText>
+              </TimelineItem>
+            </TimelineList>
+          </SectionTimeline>
+        </HiddenContent>
+
             <ProfileLinks>
               <ProfileLink href="https://github.com/M8N-MatanDessaur" title="github">
                 <svg width="25" height="25" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

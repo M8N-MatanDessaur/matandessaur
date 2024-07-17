@@ -176,6 +176,17 @@ export const fadeIn = keyframes`
   }
 `;
 
+const fadeOut = keyframes`
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+`;
+
 export const magicFade = keyframes`
   0% {
     opacity: 0;
@@ -547,3 +558,183 @@ export const ComingSoon = styled.div`
   text-decoration: none;
   filter: drop-shadow(0px 0px 10px #ff9d00);
   `;
+
+  export const SectionTimeline = styled.section`
+  box-sizing: border-box;
+  margin: 0 0 30px;
+  padding: 0;
+`;
+
+export const TitleWrapper = styled.div`
+  align-items: center;
+  box-sizing: border-box;
+  column-gap: 15px;
+  display: flex;
+  margin: 0 0 25px;
+  padding: 0;
+  row-gap: 15px;
+`;
+
+export const IconBox = styled.div`
+  align-items: center;
+  background: linear-gradient(to bottom right, #404040 0, rgba(64, 64, 64, 0) 50%);
+  border-radius: 8px;
+  box-shadow: -4px 8px 24px rgba(0, 0, 0, 0.125);
+  box-sizing: border-box;
+  color: #ffdb70;
+  display: flex;
+  font-size: 16px;
+  height: 30px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 30px;
+  z-index: 1;
+
+  @media (min-width: 580px) {
+    border-radius: 12px;
+    font-size: 18px;
+    height: 48px;
+    width: 48px;
+  }
+`;
+
+export const Heading = styled.h3`
+  box-sizing: border-box;
+  color: #fafafa;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+`;
+
+export const TimelineList = styled.ol`
+  box-sizing: border-box;
+  font-size: 15px;
+  margin: 0 0 0 45px;
+  padding: 0;
+
+  @media (min-width: 580px) {
+    margin-left: 65px;
+  }
+`;
+
+export const TimelineItem = styled.li`
+  list-style: none;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &:not(:last-child)::before {
+    background: #5d70f6;
+    content: "";
+    height: calc(100% + 50px);
+    left: -30px;
+    position: absolute;
+    top: -25px;
+    width: 1px;
+
+    @media (min-width: 580px) {
+      left: -40px;
+    }
+  }
+
+  &::after {
+    background: linear-gradient(to right, #fff, #909dfc);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #909dfc50;
+    content: "";
+    height: 6px;
+    left: -33px;
+    position: absolute;
+    top: 5px;
+    width: 6px;
+
+    @media (min-width: 580px) {
+      height: 8px;
+      left: -43px;
+      width: 8px;
+    }
+  }
+`;
+
+export const TimelineItemTitle = styled.h4`
+  box-sizing: border-box;
+  color: #fafafa;
+  font-size: 15px;
+  line-height: 1.3;
+  margin: 0 0 7px;
+  padding: 0;
+  text-transform: capitalize;
+`;
+
+export const TimelineItemDate = styled.span`
+  box-sizing: border-box;
+  color: #909dfc;
+  display: block;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+
+    span {
+    color: #9cf697;
+    font-weight: 400;
+    font-size: 12px;
+  }
+`;
+
+export const TimelineItemText = styled.p`
+  box-sizing: border-box;
+  color: #ffffffc0;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+
+  & ul {
+    padding:0;
+    padding-left: 30px;
+
+    & li {
+      margin: 5px 0;
+        &::marker {
+          color: #979ff6;
+        }
+    }
+  }
+
+  @media (min-width: 1250px) {
+    max-width: 700px;
+  }
+`;
+
+export const ToggleButton = styled.button`
+  background-color: transparent;
+  color: white;
+  border: 1px solid #5d70f6;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-top: 35px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #909dfc40;
+  }
+
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const HiddenContent = styled.div`
+  display: ${props => (props.show ? 'block' : 'none')};
+  animation: ${props => (props.show ? css`${fadeIn} 0.5s ease forwards` : css`${fadeOut} 0.5s ease forwards`)};
+  color: #ffffff;
+  margin-top: 23px;
+`;
