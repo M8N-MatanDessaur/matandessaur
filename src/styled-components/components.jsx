@@ -722,6 +722,7 @@ export const ToggleButton = styled.button`
   border-radius: 50px;
   margin-top: 35px;
   transition: background-color 0.3s ease;
+  animation: ${magicFade} 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both;
 
   &:hover {
     background-color: #909dfc40;
