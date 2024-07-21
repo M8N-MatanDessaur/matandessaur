@@ -354,7 +354,8 @@ export default function App() {
                       <ComingSoon><p>comming soon</p></ComingSoon>
                       <PostTitle>IOU</PostTitle>
                       <PostDescription>
-                        IOU is an advanced bill payment tracking app leveraging Google Gemini AI to manage and streamline shared expenses. It uses AI to analyze receipts, split costs, send reminders, and suggest payment methods.
+                      Smart Bill Splitting and Expense Tracking.
+                      IOU is a cutting-edge web app that revolutionizes personal finance management using AI. Powered by Google Gemini, IOU simplifies bill payments, tracks expenses, and gamifies financial responsibility.
                       </PostDescription>
                     </PostInfo>
                   </ProfilePost>
