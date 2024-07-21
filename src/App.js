@@ -45,7 +45,7 @@ import aleoresto from "./assets/media/aleoresto.jpg";
 import simpl from "./assets/media/Simpl.jpg";
 import dblslsh from "./assets/media/dblslsh.jpg";
 import profile from "./assets/media/profile.jpg";
-import avatar from "./assets/media/peeps-avatar-alpha-bw.png";
+import avatar from "./assets/media/m8navatar.jpg";
 import cover from "./assets/media/headerbg.svg";
 import itype from "./assets/media/itype.png";
 import v2f from "./assets/media/v2f.svg";
